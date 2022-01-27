@@ -1,2 +1,2 @@
-# HepsiburadaAddToCartWithLogin
- First challenge sent to me by Hepsiburada
+# HepsiburadaAddToCart
+ First and second challenges sent to me by Hepsiburada
