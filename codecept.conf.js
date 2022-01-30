@@ -12,16 +12,20 @@ exports.config = {
       url: "https://www.hepsiburada.com",
       show: true,
       browser: "chromium",
+      windowSize: "1920x1080",
     },
   },
   include: {
     I: "./steps_file.js",
     MainPage: "./pages/MainPage.js",
     LoginPage: "./pages/LoginPage.js",
+    SearchPage: "./pages/SearchPage.js",
+    ProductPage: "./pages/ProductPage.js",
+    CartFragment: "./fragments/CartFragment.js",
   },
   bootstrap: null,
   mocha: {},
-  name: "HepsiburadaAddToCartWithLogin",
+  name: "HepsiburadaAddToCart",
   plugins: {
     pauseOnFail: {},
     retryFailedStep: {
