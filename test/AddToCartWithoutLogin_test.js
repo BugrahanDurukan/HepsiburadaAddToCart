@@ -1,25 +1,9 @@
-Feature("AddToCart");
+Feature("AddToCartWithoutLogin");
 
 Scenario(
   "Add something to the cart as a logged in user",
-  async ({
-    I,
-    MainPage,
-    LoginPage,
-    Data,
-    SearchPage,
-    ProductPage,
-    CartFragment,
-    CartPage,
-  }) => {
+  async ({ I, MainPage, SearchPage, ProductPage, CartFragment, CartPage }) => {
     I.amOnPage("/");
-    MainPage.hoverOverLoginButton();
-    MainPage.clickOnLoginButton();
-    LoginPage.fillTheEmailField(Data.credentials.email);
-    LoginPage.clickOnLoginButton();
-    LoginPage.fillThePasswordField(Data.credentials.password);
-    LoginPage.clickOnEmailSelectButton();
-    I.see(Data.credentials.username); //login check
     MainPage.fillTheSearchBar(SearchPage.fields.productName);
     MainPage.clickOnSearchButton();
     SearchPage.goToProductPage();
@@ -39,4 +23,4 @@ Scenario(
     I.assert(productMerchantName, cartMerchantName);
     I.assert(productOtherMerchantName, cartOtherMerchantName);
   }
-).injectDependencies({ Data: require("../secret.json") });
+);

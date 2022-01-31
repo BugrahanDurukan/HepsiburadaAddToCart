@@ -14,6 +14,9 @@ exports.config = {
       browser: "chromium",
       windowSize: "1920x1080",
     },
+    AssertWrapper: {
+      require: "codeceptjs-assert",
+    },
   },
   include: {
     I: "./steps_file.js",
@@ -22,6 +25,7 @@ exports.config = {
     SearchPage: "./pages/SearchPage.js",
     ProductPage: "./pages/ProductPage.js",
     CartFragment: "./fragments/CartFragment.js",
+    CartPage: "./pages/CartPage.js",
   },
   bootstrap: null,
   mocha: {},

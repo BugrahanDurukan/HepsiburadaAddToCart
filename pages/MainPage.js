@@ -2,11 +2,11 @@ const { I } = inject();
 
 module.exports = {
   fields: {
-    searchBar: "//*[contains(@class, 'desktopOldAutosuggestTheme-input')]",
+    searchBar: ".desktopOldAutosuggestTheme-input",
   },
   buttons: {
     login: "//*[@id='login']",
-    searchButton: "//*[contains(@class, 'SearchBoxOld-buttonContainer')]",
+    searchButton: ".SearchBoxOld-buttonContainer",
   },
   unClickableElements: {
     login: "//span[contains(@title, 'Giriş Yap')]",
